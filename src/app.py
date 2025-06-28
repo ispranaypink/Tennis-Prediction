@@ -3,7 +3,7 @@ import pandas as pd
 from pathlib import Path
 import joblib
 
-model_path = Path(__file__).resolve().parent.parent / 'notebooks' / 'rf_model.pkl'
+model_path = Path(__file__).resolve().parent.parent / 'notebooks' / 'rf_model.joblib'
 
 with open('rf_model.joblib', 'rb') as f:
     rf = joblib.load(f)
