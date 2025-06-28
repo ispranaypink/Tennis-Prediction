@@ -8,9 +8,9 @@ model_path = Path(__file__).resolve().parent.parent / 'notebooks' / 'rf_model.jo
 with open(model_path , 'rb') as f:
     rf = joblib.load(f)
 
+data_path = Path(__file__).resolve().parent.parent / "data" / "t-1_cleaned_data.csv"
 # Load your matches data for player codes and stats
-matches = pd.read_csv("C:/Users/prana/Working directory/Projects repository/data-science/Tennis-prediction/data/t-1_cleaned_data.csv")
-
+matches = pd.read_csv(data_path)
 # Prepare player lists
 players = sorted(set(matches['Player_1']).union(set(matches['Player_2'])))
 
