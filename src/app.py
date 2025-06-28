@@ -3,7 +3,7 @@ import pandas as pd
 
 
 import pickle
-with open('./notebooks/rf_model.pkl', 'rb') as f:
+with open('C:/Users/prana/Working directory/Projects repository/data-science/Tennis-prediction/notebooks/rf_model.pkl', 'rb') as f:
     rf = pickle.load(f)
 
 # Load your matches data for player codes and stats
