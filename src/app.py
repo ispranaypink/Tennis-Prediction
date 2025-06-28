@@ -1,11 +1,7 @@
 import streamlit as st
 import pandas as pd
-import joblib
 
-# Load your trained model (save your model as 'rf_model.pkl' after training)
-# import pickle
-# with open('rf_model.pkl', 'wb') as f:
-#     pickle.dump(rf, f)
+
 import pickle
 with open('./notebooks/rf_model.pkl', 'rb') as f:
     rf = pickle.load(f)
