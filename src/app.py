@@ -1,9 +1,11 @@
 import streamlit as st
 import pandas as pd
-
-
+from pathlib import Path
 import pickle
-with open('C:/Users/prana/Working directory/Projects repository/data-science/Tennis-prediction/notebooks/rf_model.pkl', 'rb') as f:
+
+model_path = Path(__file__).resolve().parent.parent / 'notebooks' / 'rf_model.pkl'
+
+with open(model_path, 'rb') as f:
     rf = pickle.load(f)
 
 # Load your matches data for player codes and stats
