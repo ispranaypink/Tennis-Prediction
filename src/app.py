@@ -1,12 +1,12 @@
 import streamlit as st
 import pandas as pd
 from pathlib import Path
-import pickle
+import joblib
 
 model_path = Path(__file__).resolve().parent.parent / 'notebooks' / 'rf_model.pkl'
 
-with open(model_path, 'rb') as f:
-    rf = pickle.load(f)
+with open('rf_model.joblib', 'rb') as f:
+    rf = joblib.load(f)
 
 # Load your matches data for player codes and stats
 matches = pd.read_csv("C:/Users/prana/Working directory/Projects repository/data-science/Tennis-prediction/data/t-1_cleaned_data.csv")
